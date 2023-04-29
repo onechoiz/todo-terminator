@@ -1,0 +1,44 @@
+@import '../../../../../public/style/var.module.scss';
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $bg02;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color: $active-dark-bg;
+    background-image: url(../../../../../public/img/oops.png);
+    background-size: cover;
+    .alert-box{
+     background: $bg02;
+     @include boxShadow;
+     padding: 30px;
+     border-radius: $br;
+     font-family: $cookie;
+
+    }
+    h2{
+        font-size: 59px;
+        padding: 10px;
+
+    }
+
+    p{
+         margin: 20px 0 0;
+         font-size: 40px;
+    }
+ button{
+        @include roundBtnBsc;
+            font-family: $cookie;
+          margin: 20px;
+ }
+ button:active{
+      background: $sec-acc;
+ }
+    
+    
+}

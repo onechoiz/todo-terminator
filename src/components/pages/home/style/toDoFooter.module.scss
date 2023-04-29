@@ -1,0 +1,37 @@
+@import '../../../../../public/style/var.module.scss';
+.conatiner{
+    width: 90%;
+    color: $sec;
+    display: flex;
+    justify-content: space-between;
+}
+.count {
+    @include basicRound;
+    color: $accent;
+    background: $sec-dark-bg;
+    display: grid;
+    place-content: center;
+
+
+}
+
+.clear-btn{
+    
+    width: 120px;
+    padding:  5px 10px;
+    color: $prim;
+    background-color: $sec-dark-bg;
+    border: 1px solid $accent;
+    border-radius: $br;
+    transition: background-color 0.2s ease-in-out;
+    font-family: $cookie;
+
+ 
+}
+.clear-btn:hover {
+    @include outlineBsc
+}
+.clear-btn:active {
+      background-color: $sec-acc;
+
+}

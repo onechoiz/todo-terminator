@@ -1,0 +1,24 @@
+@import '../../../../../public/style/var.module.scss';
+
+
+.container{
+    
+     width: 300px;
+    border-radius: $br;
+    background: $prim;
+    
+
+}
+.input{
+    @include inputBsc;
+    border: none;
+    width: 100%;
+    font-size: 28px;
+    font-family: $cookie;
+
+   
+}
+.input:focus  , .input:hover {
+    // border: 3px solid $sec-acc;
+   @include outlineBsc
+}

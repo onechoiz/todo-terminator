@@ -1,0 +1,59 @@
+@import '../../../../../public/style/var.module.scss';
+.container{
+   width: 100%;
+   min-height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+
+    // background: #ffffff45;
+    @include gradBG;
+
+
+   .new-todo-box{
+      position: relative;
+    background: $active-dark-bg;
+    width: 50%;
+    padding: 40px 3px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: $br;
+    @include  boxShadow;
+   
+
+.new-todo-box__close{
+   position: absolute;
+   top: 20px;
+   right: 30px;
+   color: $accent;
+   font-size: 40px;
+
+ 
+
+}
+
+   .new-todo-box__title{
+      font-family: $love;
+      color: $prim;
+      font-size: 48px;
+     font-weight: bold;
+     @include txtShadow;
+   }
+
+  
+   }
+
+   @media (max-width: 799px) {
+      .new-todo-box{
+         width: 90%;
+      
+   }
+}
+}

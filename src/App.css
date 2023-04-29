@@ -1,0 +1,10 @@
+*, *::after , *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: rgb(255,192,164);
+background: linear-gradient(90deg, rgba(255,192,164,1) 7%, rgba(255,184,164,1) 66%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffc0a4",endColorstr="#ffb8a4",GradientType=1);
+}

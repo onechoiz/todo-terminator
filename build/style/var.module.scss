@@ -1,0 +1,104 @@
+// import 
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Cookie&family=Dancing+Script:wght@400;500;600;700&family=Love+Light&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+
+//fonts 
+ $love: 'Love Light', cursive;
+
+ $cookie: 'Cookie', cursive;
+// colours
+$sec-dark-bg: #382867;
+$active-dark-bg: #27194C;
+$bg: #FFB8A4;
+$bg02: #ffc0a4;
+$sec: #837A98;
+$prim: #FFFFFF;
+$accent: #FF29BD;
+$sec-acc: #ff29bbab;
+$shadow: #0C0817;
+
+$br: 15px;
+// grad 
+
+@mixin gradBG {
+    background:   url('../img/texture.png') no-repeat ,
+  linear-gradient(90deg, rgba(255,192,164,1) 7%, rgba(255,184,164,1) 66%);
+
+background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffc0a4",endColorstr="#ffb8a4",GradientType=1);
+}
+
+
+
+@mixin roundBtnBsc{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: -2.5px 5px 10px $shadow;
+
+    background-color: $accent;
+    color: $prim;
+    font-size: 20px;
+     
+}
+@mixin basicRound {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: -2.5px 5px 10px $shadow;
+}
+
+@mixin inputBsc{
+    padding : 15px;
+    outline: none;
+    color: $active-dark-bg;
+    border-radius: $br;
+
+    background-color: $prim;
+   
+}
+@mixin outlineBsc {
+   outline: max(2px, 0.15em) solid $sec-acc;
+  outline-offset: max(2px, 0.15em);
+}
+@mixin txtShadow{
+     text-shadow: 1px  1px  10px $sec-acc;
+}
+
+@mixin boxShadow {
+        box-shadow: -2.5px 5px 50px currentColor;
+}
+body{
+
+
+    @include gradBG;
+    
+    
+}
+button{
+    text-transform: uppercase;
+}
+.addBtn {
+    @include roundBtnBsc;
+    background-color: $accent;
+    color: $prim;
+    font-size: 40px;
+    margin: 10px;
+
+
+}
+.addBtn:hover{
+     @include outlineBsc
+}
+
+.addBtn:active{
+    background: $sec-acc;
+}
+
+
+
+
+
+// 
