@@ -152,7 +152,7 @@ export default function Home(params) {
   };
 
   const handleCloseAddNew = () => {
-    setShowAdd(false)
+    setShowAdd(false);
   };
   return (
     <div className={classes["container"]}>
@@ -164,12 +164,14 @@ export default function Home(params) {
 
           {todoList}
           <Btn btnClass={"addBtn"} btnTxt={"+"} onClick={handleShowAdd} />
-       { todo && todo.length > 0 &&  <ToDoFooter
-            totalTodos={todo.length}
-            completed={completedTodos}
-            onClearCompled={handleClearCompleted}
-            showClear={showCLear}
-          />}
+          {todo && todo.length > 0 && (
+            <ToDoFooter
+              totalTodos={todo.length}
+              completed={completedTodos}
+              onClearCompled={handleClearCompleted}
+              showClear={showCLear}
+            />
+          )}
         </div>
       )}
 

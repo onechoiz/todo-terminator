@@ -17,71 +17,60 @@
     background: $sec-dark-bg;
     border-radius: $br;
     font-size: 30px;
-    label{
-        display: flex;
-        align-items: center;
-        padding: 10px;
+    label {
+      display: flex;
+      align-items: center;
+      padding: 10px;
     }
-
   }
 
+  input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    //   background-color: var(--form-background);
+    /* Not removed via appearance */
+    margin-right: 10px;
 
+    font: inherit;
+    color: currentColor;
+    width: 30px;
+    height: 30px;
+    border: 3px solid currentColor;
+    border-radius: 10px;
+    transform: translateY(0.2px);
+  }
 
-input[type="checkbox"] {
-  /* Add if not using autoprefixer */
-  -webkit-appearance: none;
-  /* Remove most all native input styles */
-  appearance: none;
-  /* For iOS < 15 */
-//   background-color: var(--form-background);
-  /* Not removed via appearance */
-  margin-right: 10px;
-  
+  input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border: 3px solid $accent;
+    border-top: none;
+    border-right: none;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
 
-  font: inherit;
-  color: currentColor;
-  width: 30px;
-  height: 30px;
-  border: 3px solid currentColor;
-  border-radius: 10px;
-  transform: translateY(0.2px);
+  input[type="checkbox"]:checked::before {
+    opacity: 1;
+  }
 
+  input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid $sec-acc;
+    outline-offset: max(2px, 0.15em);
+  }
 
-
-}
-
-input[type="checkbox"]::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  border: 3px solid $accent;
-  border-top: none;
-  border-right: none;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-input[type="checkbox"]:checked::before {
-  opacity: 1;
-}
-
-input[type="checkbox"]:focus {
-  outline: max(2px, 0.15em) solid $sec-acc;
-  outline-offset: max(2px, 0.15em);
-}
-
-input[type="checkbox"]:disabled {
-
-
-  color: $sec;
-  cursor: not-allowed;
-}
-
-
+  input[type="checkbox"]:disabled {
+    color: $sec;
+    cursor: not-allowed;
+  }
 
   .done,
   .delete {
@@ -96,14 +85,12 @@ input[type="checkbox"]:disabled {
   }
 }
 
-
 @media (max-width: 600px) {
-    .container{
-        justify-content: center;
-        gap: 20px;
-        .task-box{
-            width: 100%;
-        }
+  .container {
+    justify-content: center;
+    gap: 20px;
+    .task-box {
+      width: 100%;
     }
-
+  }
 }

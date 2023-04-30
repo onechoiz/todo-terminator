@@ -1,19 +1,17 @@
-@import '../../../../../public/style/var.module.scss';
-.container{
-    width: 300px;
-    // padding: 20px;
-
+@import "../../../../../public/style/var.module.scss";
+.container {
+  width: 300px;
 }
-textarea{
-    resize: none;
-    @include inputBsc;
-    font-size: 28px;
-    width: 100%;
-    border: none;
-    min-height: 200px;
-    font-family: $cookie;
-
+textarea {
+  resize: none;
+  @include inputBsc;
+  font-size: 28px;
+  width: 100%;
+  border: none;
+  min-height: 200px;
+  font-family: $cookie;
 }
-textarea:focus, textarea:hover {
-    @include outlineBsc
+textarea:focus,
+textarea:hover {
+  @include outlineBsc;
 }
