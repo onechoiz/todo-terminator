@@ -51,7 +51,8 @@ textarea {
   font-family: "Cookie", cursive;
 }
 
-textarea:focus, textarea:hover {
+textarea:focus,
+textarea:hover {
   outline: max(2px, 0.15em) solid rgba(255, 41, 187, 0.6705882353);
   outline-offset: max(2px, 0.15em);
 }/*# sourceMappingURL=description.module.css.map */
